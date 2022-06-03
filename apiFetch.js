@@ -7,7 +7,9 @@ async function apiRequest(){
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('h2').innerText = data
+        document.querySelector('#name').innerText = data.fullName
+        document.querySelector('#age').innerText = data.age
+        document.querySelector('#location').innerText = data.location
     }
     catch(error){
         console.log(error)
