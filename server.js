@@ -6,8 +6,13 @@
 const express = require('express')
 // instead of constantly invoking express and calling its methods, create variable app in order for it to use the methods that come with express
 const app = express()
+//require cors module (in order to run the api locally)
+const cors = require('cors')
 //just assigning port 8000 or our localhost to a variable
 const PORT = 8000
+
+//our server can handle cors request (localhost)
+app.use(cors())
 
 //create json objects
 const siblings = {
